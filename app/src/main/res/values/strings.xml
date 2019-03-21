@@ -1,0 +1,134 @@
+<resources>
+    <string name="app_name">Smart Logger</string>
+
+    <string name="status">"RUNNING TEST STATUS"</string>
+    <string name="start_test">START TEST</string>
+    <string name="stop_test">STOP TEST</string>
+    <string name="test_length">Test Length</string>
+    <string name="log_file_name_text">Log File Name:</string>
+    <string name="log_file_hint_text">data_log.txt</string>
+    <string name="elapsed_time">"Elapsed Time: "</string>
+    <string name="end_time">"End Time: "</string>
+    <string name="battery_status">"Battery Status: "</string>
+    <string name="test_is_running_true">Test is Running</string>
+    <string name="test_is_running_false">Test is Stopped</string>
+    <string name="log_file_name">"Log File: "</string>
+    <string name="txt_suffix">.txt</string>
+    <string name="status_goes_here">"Status goes here."</string>
+    <string name="start_service">START SERVICE</string>
+    <string name="stop_service">STOP SERVICE</string>
+    <string name="xx">data_log.txt</string>
+
+    <string-array name="test_length_options">
+        <item>Test Length: 1 Minute</item>
+        <item>Test Length: 5 Minutes</item>
+        <item>Test Length: 15 Minutes</item>
+        <item>Test Length: 30 Minutes</item>
+        <item>Test Length: 1 Hour</item>
+        <item>Test Length: 1.5 Hours</item>
+        <item>Test Length: 2 Hours</item>
+        <item>Test Length: 3 Hours</item>
+        <item>Test Length: 4 Hours</item>
+    </string-array>
+
+    <string-array name="log_freq_options">
+        <item>Log Freq: 5 Seconds</item>
+        <item>Log Freq: 15 Seconds</item>
+        <item>Log Freq: 30 Seconds</item>
+        <item>Log Freq: 1 Minute</item>
+        <item>Log Freq: 5 Minutes</item>
+        <item>Log Freq: 10 Minutes</item>
+        <item>Log Freq: 30 Minutes</item>
+        <item>Log Freq: 1 Hour</item>
+    </string-array>
+
+    <string-array name="gps_freq_options">
+        <item>GPS: OFF</item>
+        <item>GPS Freq: 8.0 Hz</item>
+        <item>GPS Freq: 4.0 Hz</item>
+        <item>GPS Freq: 2.0 Hz</item>
+        <item>GPS Freq: 1.0 Hz</item>
+        <item>GPS Freq: 0.5 Hz</item>
+        <item>GPS Freq: 0.1 Hz</item>
+        <item>GPS Freq: 0.01 Hz</item>
+        <item>GPS Freq: 0.001 Hz</item>
+        <item>GPS Freq: 0.0001 Hz</item>
+    </string-array>
+
+    <string-array name="acc_freq_options">
+        <item>Accelerometer Freq: OFF</item>
+        <item>Accelerometer Freq: 64 Hz</item>
+        <item>Accelerometer Freq: 50 Hz</item>
+        <item>Accelerometer Freq: 32 Hz</item>
+        <item>Accelerometer Freq: 30 Hz</item>
+        <item>Accelerometer Freq: 16 Hz</item>
+        <item>Accelerometer Freq: 10 Hz</item>
+        <item>Accelerometer Freq: 8 Hz</item>
+        <item>Accelerometer Freq: 4 Hz</item>
+        <item>Accelerometer Freq: 2 Hz</item>
+        <item>Accelerometer Freq: 1 Hz</item>
+        <item>Accelerometer Freq: 0.5 Hz</item>
+        <item>Accelerometer Freq: 0.1 Hz</item>
+    </string-array>
+
+    <string-array name="gyro_freq_options">
+        <item>Gyroscope Freq: OFF</item>
+        <item>Gyroscope Freq: 64 Hz</item>
+        <item>Gyroscope Freq: 50 Hz</item>
+        <item>Gyroscope Freq: 32 Hz</item>
+        <item>Gyroscope Freq: 30 Hz</item>
+        <item>Gyroscope Freq: 16 Hz</item>
+        <item>Gyroscope Freq: 10 Hz</item>
+        <item>Gyroscope Freq: 8 Hz</item>
+        <item>Gyroscope Freq: 4 Hz</item>
+        <item>Gyroscope Freq: 2 Hz</item>
+        <item>Gyroscope Freq: 1 Hz</item>
+        <item>Gyroscope Freq: 0.5 Hz</item>
+        <item>Gyroscope Freq: 0.1 Hz</item>
+    </string-array>
+
+    <string-array name="mag_freq_options">
+        <item>Magnetometer Freq: OFF</item>
+        <item>Magnetometer Freq: 64 Hz</item>
+        <item>Magnetometer Freq: 50 Hz</item>
+        <item>Magnetometer Freq: 32 Hz</item>
+        <item>Magnetometer Freq: 30 Hz</item>
+        <item>Magnetometer Freq: 16 Hz</item>
+        <item>Magnetometer Freq: 10 Hz</item>
+        <item>Magnetometer Freq: 8 Hz</item>
+        <item>Magnetometer Freq: 4 Hz</item>
+        <item>Magnetometer Freq: 2 Hz</item>
+        <item>Magnetometer Freq: 1 Hz</item>
+        <item>Magnetometer Freq: 0.5 Hz</item>
+        <item>Magnetometer Freq: 0.1 Hz</item>
+    </string-array>
+
+    <string-array name="rotation_vector_freq_options">
+        <item>Rotation Vector Freq: OFF</item>
+        <item>Rotation Vector Freq: 64 Hz</item>
+        <item>Rotation Vector Freq: 50 Hz</item>
+        <item>Rotation Vector Freq: 32 Hz</item>
+        <item>Rotation Vector Freq: 30 Hz</item>
+        <item>Rotation Vector Freq: 16 Hz</item>
+        <item>Rotation Vector Freq: 10 Hz</item>
+        <item>Rotation Vector Freq: 8 Hz</item>
+        <item>Rotation Vector Freq: 4 Hz</item>
+        <item>Rotation Vector Freq: 2 Hz</item>
+        <item>Rotation Vector Freq: 1 Hz</item>
+        <item>Rotation Vector Freq: 0.5 Hz</item>
+        <item>Rotation Vector Freq: 0.1 Hz</item>
+    </string-array>
+
+    <string-array name="report_latency_options">
+        <item>Motion Latency: 1 Minute</item>
+        <item>Motion Latency: 30 Seconds</item>
+        <item>Motion Latency: 10 Seconds</item>
+        <item>Motion Latency: 5 Seconds</item>
+        <item>Motion Latency: 3 Seconds</item>
+        <item>Motion Latency: 1 Second</item>
+        <item>Motion Latency: 0.5 Seconds</item>
+        <item>Motion Latency: 0.3 Seconds</item>
+        <item>Motion Latency: 0.1 Seconds</item>
+    </string-array>
+
+</resources>
