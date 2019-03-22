@@ -2,6 +2,8 @@ package com.gotruemotion.smartlogger;
 
 import android.Manifest;
 import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
@@ -15,6 +17,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.BatteryManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -33,6 +36,7 @@ public class LogSensorData extends Service
     private static final String TAG = "TagSmartLogger";
 
     private static final String CHANNEL_ID = "logSensorDataChannel";
+    private static final int notifyID = 1;
 
     private String logFileName = "";
     private FileOutputStream logFile = null;
@@ -45,7 +49,18 @@ public class LogSensorData extends Service
     }
 
     void showNotification() {
-        // Oreo required notification.
+        // Oreo required channel
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationManager mNotificationManager =
+                    (NotificationManager) getSystemService(MainActivity.NOTIFICATION_SERVICE);
+
+            if (mNotificationManager != null) {
+                NotificationChannel mChannel = new NotificationChannel(CHANNEL_ID,
+                        "Smart Logger Data Channel", NotificationManager.IMPORTANCE_HIGH);
+                mNotificationManager.createNotificationChannel(mChannel);
+            }
+        }
+
         Intent notificationIntent = new Intent(this, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this,
                 0, notificationIntent, 0);
@@ -59,7 +74,7 @@ public class LogSensorData extends Service
                 .setContentIntent(pendingIntent)
                 .build();
 
-        startForeground(1, notification);
+        startForeground(notifyID, notification);
     }
 
     @Override
@@ -136,6 +151,8 @@ public class LogSensorData extends Service
         String dirPath = Environment.getExternalStorageDirectory().getAbsolutePath();
         dirPath += "/" + "smart_logger";
         String filePath = dirPath + "/" + logFileName;
+
+        Log.i(TAG, "Logging to " + filePath);
 
         // Open file based on testName.
         try {
